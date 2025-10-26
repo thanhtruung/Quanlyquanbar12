@@ -2,6 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
+using Quanlyquanbar1.Models;
 
 namespace Quanlyquanbar1.entities
 {

@@ -210,8 +210,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\QuanLyQuanBarContext.cs" />
+    <Compile Include="Models\QuanlyquanbarDB.cs" />
+    <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Windows\Forms\DataGridViewCellEventHandlerD.cs" />
     <Compile Include="Trust.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

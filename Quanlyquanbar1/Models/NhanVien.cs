@@ -1,4 +1,4 @@
-namespace Quanlyquanbar1.entities
+namespace Quanlyquanbar1.Models
 {
     using System;
     using System.Collections.Generic;
@@ -19,6 +19,6 @@ namespace Quanlyquanbar1.entities
         [StringLength(50)]
         public string ChucVu { get; set; }
 
-        public decimal? Luong { get; set; }
+        public decimal Luong { get; set; }
     }
 }

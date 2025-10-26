@@ -373,7 +373,8 @@ namespace Quanlyquanbar1
             this.dgvKhach.Name = "dgvKhach";
             this.dgvKhach.Size = new System.Drawing.Size(750, 160);
             this.dgvKhach.TabIndex = 0;
-            this.dgvKhach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
+            this.dgvKhach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhach_CellClick);
+
             // 
             // txtTenKH
             // 

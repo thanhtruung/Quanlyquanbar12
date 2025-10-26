@@ -1,4 +1,4 @@
-namespace Quanlyquanbar1.entities
+namespace Quanlyquanbar1.Models
 {
     using System;
     using System.Collections.Generic;

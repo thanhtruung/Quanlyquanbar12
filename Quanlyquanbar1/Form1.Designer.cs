@@ -210,6 +210,7 @@ namespace Quanlyquanbar1
             this.dgvDoUong.Name = "dgvDoUong";
             this.dgvDoUong.Size = new System.Drawing.Size(750, 160);
             this.dgvDoUong.TabIndex = 10;
+            this.dgvDoUong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDoUong_CellClick);
             // 
             // lblTongDoUong
             // 
@@ -250,6 +251,7 @@ namespace Quanlyquanbar1
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.Size = new System.Drawing.Size(750, 160);
             this.dgvNhanVien.TabIndex = 0;
+            this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             this.dgvNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellContentClick);
             // 
             // txtTenNV
@@ -371,6 +373,7 @@ namespace Quanlyquanbar1
             this.dgvKhach.Name = "dgvKhach";
             this.dgvKhach.Size = new System.Drawing.Size(750, 160);
             this.dgvKhach.TabIndex = 0;
+            this.dgvKhach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
             // 
             // txtTenKH
             // 
@@ -478,19 +481,47 @@ namespace Quanlyquanbar1
 
         }
 
-        private void btnTestConnection_Click_1(object sender, EventArgs e)
+        private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             throw new NotImplementedException();
         }
+
+        private void tabKhachHang_Click(object sender, EventArgs e)
+        {
+            dgvKhach.ClearSelection();
+        }
+        private void tabNhanVien_Click(object sender, EventArgs e)
+        {
+            dgvNhanVien.ClearSelection();
+        }
+
+
+        private void btnTestConnection_Click_1(object sender, EventArgs e)
+        {
+            // Nếu bạn chưa làm chức năng test DB, có thể hiển thị thông báo tạm
+            MessageBox.Show("Chưa cấu hình kết nối SQL. Ứng dụng đang chạy chế độ offline (DataTable).",
+                            "Test connection", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
 
         private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            throw new NotImplementedException();
+            // Gọi lại handler CellClick để dùng chung logic (nếu đã có)
+            try
+            {
+                dgvNhanVien_CellClick(sender, e);
+            }
+            catch
+            {
+                // nếu không có method dgvNhanVien_CellClick thì bỏ qua an toàn
+            }
         }
+
 
         private void tabDoUong_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            // Khi người dùng bấm vào tab "Đồ uống"
+            dgvDoUong.ClearSelection();
         }
 
         #endregion
